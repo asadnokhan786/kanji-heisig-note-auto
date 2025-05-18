@@ -1,0 +1,1 @@
+# kanji-heisig-note-auto
