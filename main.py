@@ -52,7 +52,7 @@ def process_chapter(chapter_num):
         populated_template = populate_template(row)
 
         # Save the populated template to a file named by the keyword of the kanji
-        template_filename = os.path.join(output_templates_dir, f"{row['keyword']}.md")
+        template_filename = os.path.join(output_templates_dir, f"{row['keyword'].title()}.md")
         with open(template_filename, 'w') as f:
             f.write(populated_template)
 
@@ -65,7 +65,7 @@ def process_chapter(chapter_num):
             print(f"Warning: SVG file for {row['unicode_code_point']} not found.")
 
     # Delete the unzipped folder after processing
-    # shutil.rmtree(unzip_dir)
+    shutil.rmtree(unzip_dir)
     print(f"Finished processing chapter {chapter_num}. All files are saved.")
 
 # Set up argparse to handle command-line arguments
