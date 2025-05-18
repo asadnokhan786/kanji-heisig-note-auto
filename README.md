@@ -12,6 +12,7 @@
 - Run `python3 main.py <chapter-number>` to generate auto populated kanji notes based on template file
 
 ## Template Requirements
+- Template file must be named `template.md` in the main project directory
 - Fields must be encapsulated with `{}` curly braces
 - Currently supported fields & corresponding naming convention
     - Heisig Number: `heisig_number`
